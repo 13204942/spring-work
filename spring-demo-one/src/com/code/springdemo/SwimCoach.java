@@ -7,4 +7,9 @@ public class SwimCoach implements Coach {
 		return "Spend 90 mins on swimming";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		return null;
+	}
+
 }
