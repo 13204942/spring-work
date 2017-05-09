@@ -10,7 +10,11 @@
 	
     <!-- Define your beans here -->
  	<bean id="myCoach"
- 		class="com.code.springdemo.TrackCoach">	 		
+ 		class="com.code.springdemo.BaseballCoach">	 		
+ 	</bean>
+ 	
+ 	<bean id="mySwimCoach"
+ 		class="com.code.springdemo.SwimCoach">	 		
  	</bean>
     
     <!-- define the dependency -->
