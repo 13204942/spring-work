@@ -33,6 +33,13 @@
  	<bean id="mySwimCoach"
  		class="com.code.springdemo.SwimCoach">	 		
  	</bean>
+ 	
+ 	<bean id="myCricketCoach"
+ 		class="com.code.springdemo.CricketCoach">
+ 		
+ 		<!-- set up setter injection -->
+    	<property name="fortuneService" ref="myFortune" />	 		
+ 	</bean>
 
 </beans>
 
