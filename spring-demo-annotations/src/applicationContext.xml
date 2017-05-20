@@ -8,8 +8,10 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- add entry to enable component scanning -->
-	
 	<context:component-scan base-package="com.code.springdemo" />
+	
+	<!-- load values from a file -->
+	<context:property-placeholder location="classpath:fortune.properties" />
 </beans>
 
 
