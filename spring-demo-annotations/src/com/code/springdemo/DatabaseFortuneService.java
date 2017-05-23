@@ -2,6 +2,8 @@ package com.code.springdemo;
 
 import java.util.Random;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -25,6 +27,7 @@ public class DatabaseFortuneService implements FortuneService {
 	private Random myRandom = new Random();
 	
 	@Override
+	@PostConstruct
 	public String getFortune() {
 		data[0] = username;
 		data[1] = password;

@@ -15,45 +15,48 @@ public class TennisCoach implements Coach {
 	@Autowired
 	@Qualifier("databaseFortuneService")
 	private FortuneService fortuneService;
-
+	
 	// define a default constructor
 	public TennisCoach() {
 		System.out.println(">> TennisCoach: inside default constructor");
 	}
-
+	
 	// define my init method
 	@PostConstruct
 	public void doMyStartupStuff() {
 		System.out.println(">> TennisCoach: inside of doMyStartupStuff()");
 	}
-
+	
 	// define my destory method
 	@PreDestroy
 	public void doMyCleanupStuff() {
 		System.out.println(">> TennisCoach: inside of doMyCleanupStuff()");
 	}
-
+	
 	// define a setter method
 	/*
-	 * @Autowired public void setFortuneService(FortuneService
-	 * theFortuneService) { this.fortuneService = theFortuneService;
-	 * System.out.println(">> TennisCoach: inside setFortuneService() method");
-	 * }
-	 * 
-	 * 
-	 * // define a custom method (method injection)
-	 * 
-	 * @Autowired public void doSomeFortuneService(FortuneService
-	 * theFortuneService) { this.fortuneService = theFortuneService;
-	 * System.out.println(">> TennisCoach: inside doSomeFortuneService() method"
-	 * ); }
-	 */
+	@Autowired
+	public void setFortuneService(FortuneService theFortuneService) {
+		this.fortuneService = theFortuneService;
+		System.out.println(">> TennisCoach: inside setFortuneService() method");
+	}
 
+	
+	// define a custom method (method injection)
+	@Autowired
+	public void doSomeFortuneService(FortuneService theFortuneService) {
+		this.fortuneService = theFortuneService;
+		System.out.println(">> TennisCoach: inside doSomeFortuneService() method");
+	}
+	 */
+	
 	/*
-	 * @Autowired public TennisCoach(FortuneService theFortuneService) {
-	 * this.fortuneService = theFortuneService; }
-	 */
-
+	@Autowired
+	public TennisCoach(FortuneService theFortuneService) {
+		this.fortuneService = theFortuneService;
+	}
+	*/
+	
 	@Override
 	public String getDailyWorkout() {
 		return "Practice your backhand volley";
