@@ -56,3 +56,8 @@
   - spring-websocket-4.3.8.RELEASE-javadoc.jar
   - spring-websocket-4.3.8.RELEASE-sources.jar
   - spring-websocket-4.3.8.RELEASE.jar
+
+## To set up Spring MVC, three files are needed
+  - commons-logging-1.2.jar
+  - javax.servlet.jsp.jstl-1.2.1.jar
+  - javax.servlet.jsp.jstl-api-1.2.1.jar
